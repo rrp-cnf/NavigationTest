@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B7CDE832C3B145F0007F4F1 /* ScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7CDE822C3B145F0007F4F1 /* ScreenViewModel.swift */; };
+		0B7CDE852C3B2E610007F4F1 /* ContentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7CDE842C3B2E610007F4F1 /* ContentData.swift */; };
+		0B7CDE872C3B359C0007F4F1 /* ContentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7CDE862C3B359C0007F4F1 /* ContentDetailView.swift */; };
+		0B7CDE8A2C3B38D70007F4F1 /* UIImageColors in Frameworks */ = {isa = PBXBuildFile; productRef = 0B7CDE892C3B38D70007F4F1 /* UIImageColors */; };
 		0B9F2B582C3955E200699790 /* NavigationTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9F2B572C3955E200699790 /* NavigationTestApp.swift */; };
 		0B9F2B5A2C3955E200699790 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9F2B592C3955E200699790 /* ContentView.swift */; };
 		0B9F2B5C2C3955E400699790 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B9F2B5B2C3955E400699790 /* Assets.xcassets */; };
@@ -26,6 +30,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B7CDE822C3B145F0007F4F1 /* ScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenViewModel.swift; sourceTree = "<group>"; };
+		0B7CDE842C3B2E610007F4F1 /* ContentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentData.swift; sourceTree = "<group>"; };
+		0B7CDE862C3B359C0007F4F1 /* ContentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailView.swift; sourceTree = "<group>"; };
 		0B9F2B542C3955E200699790 /* NavigationTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigationTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B9F2B572C3955E200699790 /* NavigationTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTestApp.swift; sourceTree = "<group>"; };
 		0B9F2B592C3955E200699790 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -50,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B7CDE8A2C3B38D70007F4F1 /* UIImageColors in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +99,7 @@
 				0B9F2B5E2C3955E400699790 /* Preview Assets.xcassets */,
 				0B9F2B692C39582900699790 /* MenuData.swift */,
 				0B9F2B7D2C3A970700699790 /* UserData.swift */,
+				0B7CDE842C3B2E610007F4F1 /* ContentData.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -100,6 +109,7 @@
 			children = (
 				0B9F2B652C39560900699790 /* MenuViewModel.swift */,
 				0B9F2B7B2C3A96AF00699790 /* UserViewModel.swift */,
+				0B7CDE822C3B145F0007F4F1 /* ScreenViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -131,6 +141,7 @@
 				0B9F2B752C3A942800699790 /* ProfileView.swift */,
 				0B9F2B772C3A944300699790 /* ScreenView.swift */,
 				0B9F2B792C3A945E00699790 /* ListView.swift */,
+				0B7CDE862C3B359C0007F4F1 /* ContentDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -151,6 +162,9 @@
 			dependencies = (
 			);
 			name = NavigationTest;
+			packageProductDependencies = (
+				0B7CDE892C3B38D70007F4F1 /* UIImageColors */,
+			);
 			productName = NavigationTest;
 			productReference = 0B9F2B542C3955E200699790 /* NavigationTest.app */;
 			productType = "com.apple.product-type.application";
@@ -179,6 +193,9 @@
 				Base,
 			);
 			mainGroup = 0B9F2B4B2C3955E200699790;
+			packageReferences = (
+				0B7CDE882C3B38D70007F4F1 /* XCRemoteSwiftPackageReference "UIImageColors" */,
+			);
 			productRefGroup = 0B9F2B552C3955E200699790 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -210,12 +227,15 @@
 				0B9F2B6A2C39582900699790 /* MenuData.swift in Sources */,
 				0B9F2B7C2C3A96AF00699790 /* UserViewModel.swift in Sources */,
 				0B9F2B762C3A942800699790 /* ProfileView.swift in Sources */,
+				0B7CDE832C3B145F0007F4F1 /* ScreenViewModel.swift in Sources */,
 				0B9F2B662C39560900699790 /* MenuViewModel.swift in Sources */,
 				0B9F2B5A2C3955E200699790 /* ContentView.swift in Sources */,
 				0B9F2B782C3A944300699790 /* ScreenView.swift in Sources */,
 				0B9F2B6E2C395B2400699790 /* HomeView.swift in Sources */,
 				0B9F2B742C3A8EF900699790 /* MenuItemView.swift in Sources */,
 				0B9F2B722C395B6000699790 /* HotView.swift in Sources */,
+				0B7CDE872C3B359C0007F4F1 /* ContentDetailView.swift in Sources */,
+				0B7CDE852C3B2E610007F4F1 /* ContentData.swift in Sources */,
 				0B9F2B7A2C3A945E00699790 /* ListView.swift in Sources */,
 				0B9F2B702C395B3300699790 /* SearchView.swift in Sources */,
 				0B9F2B582C3955E200699790 /* NavigationTestApp.swift in Sources */,
@@ -424,6 +444,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0B7CDE882C3B38D70007F4F1 /* XCRemoteSwiftPackageReference "UIImageColors" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jathu/UIImageColors";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0B7CDE892C3B38D70007F4F1 /* UIImageColors */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0B7CDE882C3B38D70007F4F1 /* XCRemoteSwiftPackageReference "UIImageColors" */;
+			productName = UIImageColors;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0B9F2B4C2C3955E200699790 /* Project object */;
 }
