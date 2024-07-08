@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ScreenViewModel: Codable, Identifiable {
+struct ScreenViewModel: Codable, Identifiable, Hashable {
     let id: UUID
     let title: String
     let backgroundImage: String
@@ -21,7 +21,7 @@ struct ScreenViewModel: Codable, Identifiable {
     }
 }
 
-struct WidgetViewModel: Codable, Identifiable {
+struct WidgetViewModel: Codable, Identifiable, Hashable {
     let id: UUID
     let title: String
     let backgroundImage: String
@@ -35,7 +35,7 @@ struct WidgetViewModel: Codable, Identifiable {
     }
 }
 
-struct ContentViewModel: Codable, Identifiable {
+struct ContentViewModel: Codable, Identifiable, Hashable {
     let id: UUID
     let title: String
     let cover: String

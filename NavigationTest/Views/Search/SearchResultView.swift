@@ -21,7 +21,9 @@ struct SearchResultView: View {
                 ScrollView {
                     LazyVStack {
                         ForEach(searchResults) { content in
-                            ContentListItemView(content: content)
+                            NavigationLink(value: content, label:{
+                                ContentListItemView(content: content)
+                            })
                         }
                         .padding(.horizontal)
                     }

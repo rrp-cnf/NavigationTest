@@ -8,12 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
-    let menu = menuSampleData
+    let menu: [MenuViewModel]
+    @StateObject private var navigationModel: NavigationModel
+    init(menu: [MenuViewModel]) {
+        self.menu = menu
+        _navigationModel = StateObject(wrappedValue: NavigationModel(menu: menu))
+    }
+    
     var body: some View {
-        TabView() {
+        TabView(selection: $navigationModel.selectedTabId) {
             ForEach(menu) {menuItem in
-                NavigationStack() {
+                NavigationStack(path: binding(for: menuItem.id)) {
                     MenuItemView(menuItem: menuItem)
+                        .navigationDestination(for: ContentViewModel.self) { content in
+                            switch content.type {
+                            case .detail:
+                                ContentDetailView(content: content)
+                            case .player:
+                                PlayerView(content: content)
+                            case .list:
+                                ListView(content: content)
+                            }
+                        }
                 }
                 .tabItem {
                     VStack {
@@ -21,12 +37,20 @@ struct ContentView: View {
                         Image(systemName: menuItem.icon)
                     }
                 }
+                .tag(menuItem.id)
             }
         }
         .padding()
     }
+    
+    private func binding(for key: UUID) -> Binding<NavigationPath> {
+        Binding(
+            get: { navigationModel.paths[key, default: NavigationPath()] },
+            set: { navigationModel.paths[key] = $0 }
+        )
+    }
 }
 
 #Preview() {
-    ContentView()
+    ContentView(menu: menuSampleData)
 }

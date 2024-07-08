@@ -14,7 +14,9 @@ struct HotView: View {
         ScrollView {
             LazyVStack {
                 ForEach(contentList) { content in
-                    ContentListItemView(content: content)
+                    NavigationLink(value: content, label: {
+                        ContentListItemView(content: content)
+                    })
                 }
                 .padding(.horizontal)
             }

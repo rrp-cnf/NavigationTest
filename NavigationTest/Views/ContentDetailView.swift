@@ -35,15 +35,13 @@ struct ContentDetailView: View {
                 Text(content.title)
                     .font(.title)
                     .foregroundColor(titleColor)
-                Button(action: {
-                    // Acción del botón
-                }) {
+                NavigationLink(value: content, label: {
                     Text(content.type == .list ? "Ver Episodios" : "Ver Contenido")
                         .foregroundColor(.white)
                         .padding(8)
                         .background(BlurView(style: .systemUltraThinMaterial))
                         .cornerRadius(10)
-                }
+                })
             }
             .padding(.horizontal)
         }
