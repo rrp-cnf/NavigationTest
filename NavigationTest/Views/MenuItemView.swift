@@ -13,9 +13,9 @@ struct MenuItemView: View {
     var body: some View {
         switch menuItem.type {
         case .screen:
-            ScreenView()
+            ScreenView(screen: screenSampleData)
         case .list:
-            ListView()
+            HotView()
         case .search:
             SearchView()
         case .profile:

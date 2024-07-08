@@ -8,8 +8,17 @@
 import SwiftUI
 
 struct HotView: View {
+    let contentList: [ContentViewModel] = contentListData
+    
     var body: some View {
-        Text("Trending View")
+        ScrollView {
+            LazyVStack {
+                ForEach(contentList) { content in
+                    ContentListItemView(content: content)
+                }
+                .padding(.horizontal)
+            }
+        }
     }
 }
 

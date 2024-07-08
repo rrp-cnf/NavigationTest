@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct SearchView: View {
+    @State private var searchText = ""
+
     var body: some View {
-        Text("Search View")
+        SearchResultView(searchText: $searchText)
+            .searchable(text: $searchText)
     }
 }
 
