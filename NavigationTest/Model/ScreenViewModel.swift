@@ -42,14 +42,16 @@ struct ContentViewModel: Codable, Identifiable, Hashable {
     let contentUrl: String
     let type: ContentTypeEnum
     let contents: [ContentViewModel]?
-    
-    init(id: UUID = UUID(), title: String, cover: String, contentUrl: String, type: ContentTypeEnum, contents: [ContentViewModel]) {
+    var isFinal: Bool
+
+    init(id: UUID = UUID(), title: String, cover: String, contentUrl: String, type: ContentTypeEnum, contents: [ContentViewModel], isFinal: Bool) {
         self.id = id
         self.title = title
         self.cover = cover
         self.contentUrl = contentUrl
         self.type = type
         self.contents = contents
+        self.isFinal = isFinal
     }
 }
 

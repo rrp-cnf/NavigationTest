@@ -23,6 +23,7 @@ struct SearchResultView: View {
                         ForEach(searchResults) { content in
                             NavigationLink(value: content, label:{
                                 ContentListItemView(content: content)
+                                    .navigationTitle("Búsqueda")
                             })
                         }
                         .padding(.horizontal)
