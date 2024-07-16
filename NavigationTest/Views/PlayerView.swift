@@ -6,12 +6,26 @@
 //
 
 import SwiftUI
+import AVKit
 
 struct PlayerView: View {
     let content: ContentViewModel
     
     var body: some View {
-        Text("Content: \(content.contentUrl)")
+        if let url = URL(string: content.contentUrl) {
+            let player = AVPlayer(url: url)
+            VideoPlayer(player: player)
+            .onAppear {
+                player.play()
+            }
+            .onDisappear {
+                player.pause()
+            }
+            .edgesIgnoringSafeArea(.all)
+        } else {
+            Text("Url \(content.contentUrl) no válida.")
+                .focusable()
+        }
     }
 }
 

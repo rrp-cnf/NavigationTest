@@ -7,61 +7,61 @@
 
 import Foundation
 
-let contentData1 = ContentViewModel(title: "La historia del saber", cover: "https://picsum.photos/id/379/1280/720", contentUrl: "https://www.sample-videos.com/video321/mp4/720/big_buck_bunny_720p_10mb.mp4", type: .detail, contents: [], isFinal: false)
+let contentData1 = ContentViewModel(title: "La historia del saber", cover: "https://picsum.photos/id/379/1280/720", contentUrl: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8", type: .detail, contents: [], isFinal: false)
 
-let contentData2 = ContentViewModel(title: "Ciencia y Tecnología", cover: "https://picsum.photos/id/582/1280/720", contentUrl: "https://www.sample-videos.com/video321/mp4/720/big_buck_bunny_720p_10mb.mp4", type: .list, contents: [
-    ContentViewModel(title: "Subtema 1", cover: "https://picsum.photos/id/101/1280/720", contentUrl: "https://www.sample-videos.com/video321/mp4/720/big_buck_bunny_720p_10mb.mp4", type: .detail, contents: [], isFinal: false),
-    ContentViewModel(title: "Subtema 2", cover: "https://picsum.photos/id/102/1280/720", contentUrl: "https://www.sample-videos.com/video321/mp4/720/big_buck_bunny_720p_10mb.mp4", type: .detail, contents: [], isFinal: false)
+let contentData2 = ContentViewModel(title: "Ciencia y Tecnología", cover: "https://picsum.photos/id/582/1280/720", contentUrl: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8", type: .list, contents: [
+    ContentViewModel(title: "Subtema 1", cover: "https://picsum.photos/id/101/1280/720", contentUrl: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8", type: .detail, contents: [], isFinal: false),
+    ContentViewModel(title: "Subtema 2", cover: "https://picsum.photos/id/102/1280/720", contentUrl: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8", type: .detail, contents: [], isFinal: false)
 ], isFinal: false)
 
-let contentData3 = ContentViewModel(title: "Historia Universal", cover: "https://picsum.photos/id/783/1280/720", contentUrl: "https://www.sample-videos.com/video321/mp4/720/big_buck_bunny_720p_10mb.mp4", type: .player, contents: [], isFinal: false)
+let contentData3 = ContentViewModel(title: "Historia Universal", cover: "https://picsum.photos/id/783/1280/720", contentUrl: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8", type: .player, contents: [], isFinal: false)
 
-let contentData4 = ContentViewModel(title: "Geografía del mundo", cover: "https://picsum.photos/id/456/1280/720", contentUrl: "https://www.sample-videos.com/video321/mp4/720/big_buck_bunny_720p_10mb.mp4", type: .detail, contents: [], isFinal: false)
+let contentData4 = ContentViewModel(title: "Geografía del mundo", cover: "https://picsum.photos/id/456/1280/720", contentUrl: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8", type: .detail, contents: [], isFinal: false)
 
-let contentData5 = ContentViewModel(title: "Arte y Cultura", cover: "https://picsum.photos/id/341/1280/720", contentUrl: "https://www.sample-videos.com/video321/mp4/720/big_buck_bunny_720p_10mb.mp4", type: .list, contents: [
-    ContentViewModel(title: "Subtema A", cover: "https://picsum.photos/id/201/1280/720", contentUrl: "https://www.sample-videos.com/video321/mp4/720/big_buck_bunny_720p_10mb.mp4", type: .detail, contents: [], isFinal: false),
-    ContentViewModel(title: "Subtema B", cover: "https://picsum.photos/id/202/1280/720", contentUrl: "https://www.sample-videos.com/video321/mp4/720/big_buck_bunny_720p_10mb.mp4", type: .detail, contents: [], isFinal: false)
+let contentData5 = ContentViewModel(title: "Arte y Cultura", cover: "https://picsum.photos/id/341/1280/720", contentUrl: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8", type: .list, contents: [
+    ContentViewModel(title: "Subtema A", cover: "https://picsum.photos/id/201/1280/720", contentUrl: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8", type: .detail, contents: [], isFinal: false),
+    ContentViewModel(title: "Subtema B", cover: "https://picsum.photos/id/202/1280/720", contentUrl: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8", type: .detail, contents: [], isFinal: false)
 ], isFinal: false)
 
-let contentData6 = ContentViewModel(title: "Matemáticas Avanzadas", cover: "https://picsum.photos/id/111/1280/720", contentUrl: "https://www.sample-videos.com/video321/mp4/720/big_buck_bunny_720p_10mb.mp4", type: .player, contents: [], isFinal: false)
+let contentData6 = ContentViewModel(title: "Matemáticas Avanzadas", cover: "https://picsum.photos/id/111/1280/720", contentUrl: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8", type: .player, contents: [], isFinal: false)
 
-let contentData7 = ContentViewModel(title: "Física Moderna", cover: "https://picsum.photos/id/777/1280/720", contentUrl: "https://www.sample-videos.com/video321/mp4/720/big_buck_bunny_720p_10mb.mp4", type: .detail, contents: [], isFinal: false)
+let contentData7 = ContentViewModel(title: "Física Moderna", cover: "https://picsum.photos/id/777/1280/720", contentUrl: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8", type: .detail, contents: [], isFinal: false)
 
-let contentData8 = ContentViewModel(title: "Química Orgánica", cover: "https://picsum.photos/id/214/1280/720", contentUrl: "https://www.sample-videos.com/video321/mp4/720/big_buck_bunny_720p_10mb.mp4", type: .list, contents: [
-    ContentViewModel(title: "Reacciones", cover: "https://picsum.photos/id/301/1280/720", contentUrl: "https://www.sample-videos.com/video321/mp4/720/big_buck_bunny_720p_10mb.mp4", type: .detail, contents: [], isFinal: false),
-    ContentViewModel(title: "Compuestos", cover: "https://picsum.photos/id/302/1280/720", contentUrl: "https://www.sample-videos.com/video321/mp4/720/big_buck_bunny_720p_10mb.mp4", type: .detail, contents: [], isFinal: false)
+let contentData8 = ContentViewModel(title: "Química Orgánica", cover: "https://picsum.photos/id/214/1280/720", contentUrl: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8", type: .list, contents: [
+    ContentViewModel(title: "Reacciones", cover: "https://picsum.photos/id/301/1280/720", contentUrl: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8", type: .detail, contents: [], isFinal: false),
+    ContentViewModel(title: "Compuestos", cover: "https://picsum.photos/id/302/1280/720", contentUrl: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8", type: .detail, contents: [], isFinal: false)
 ], isFinal: false)
 
-let contentData9 = ContentViewModel(title: "Biología Molecular", cover: "https://picsum.photos/id/529/1280/720", contentUrl: "https://www.sample-videos.com/video321/mp4/720/big_buck_bunny_720p_10mb.mp4", type: .player, contents: [], isFinal: false)
+let contentData9 = ContentViewModel(title: "Biología Molecular", cover: "https://picsum.photos/id/529/1280/720", contentUrl: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8", type: .player, contents: [], isFinal: false)
 
-let contentData10 = ContentViewModel(title: "Astronomía y Cosmos", cover: "https://picsum.photos/id/603/1280/720", contentUrl: "https://www.sample-videos.com/video321/mp4/720/big_buck_bunny_720p_10mb.mp4", type: .detail, contents: [], isFinal: false)
+let contentData10 = ContentViewModel(title: "Astronomía y Cosmos", cover: "https://picsum.photos/id/603/1280/720", contentUrl: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8", type: .detail, contents: [], isFinal: false)
 
-let contentData11 = ContentViewModel(title: "Historia de América", cover: "https://picsum.photos/id/239/1280/720", contentUrl: "https://www.sample-videos.com/video321/mp4/720/big_buck_bunny_720p_10mb.mp4", type: .list, contents: [
-    ContentViewModel(title: "Colonización", cover: "https://picsum.photos/id/401/1280/720", contentUrl: "https://www.sample-videos.com/video321/mp4/720/big_buck_bunny_720p_10mb.mp4", type: .detail, contents: [], isFinal: false),
-    ContentViewModel(title: "Independencia", cover: "https://picsum.photos/id/402/1280/720", contentUrl: "https://www.sample-videos.com/video321/mp4/720/big_buck_bunny_720p_10mb.mp4", type: .detail, contents: [], isFinal: false)
+let contentData11 = ContentViewModel(title: "Historia de América", cover: "https://picsum.photos/id/239/1280/720", contentUrl: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8", type: .list, contents: [
+    ContentViewModel(title: "Colonización", cover: "https://picsum.photos/id/401/1280/720", contentUrl: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8", type: .detail, contents: [], isFinal: false),
+    ContentViewModel(title: "Independencia", cover: "https://picsum.photos/id/402/1280/720", contentUrl: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8", type: .detail, contents: [], isFinal: false)
 ], isFinal: false)
 
-let contentData12 = ContentViewModel(title: "Psicología y Mente", cover: "https://picsum.photos/id/314/1280/720", contentUrl: "https://www.sample-videos.com/video321/mp4/720/big_buck_bunny_720p_10mb.mp4", type: .player, contents: [], isFinal: false)
+let contentData12 = ContentViewModel(title: "Psicología y Mente", cover: "https://picsum.photos/id/314/1280/720", contentUrl: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8", type: .player, contents: [], isFinal: false)
 
-let contentData13 = ContentViewModel(title: "Sociología Contemporánea", cover: "https://picsum.photos/id/115/1280/720", contentUrl: "https://www.sample-videos.com/video321/mp4/720/big_buck_bunny_720p_10mb.mp4", type: .detail, contents: [], isFinal: false)
+let contentData13 = ContentViewModel(title: "Sociología Contemporánea", cover: "https://picsum.photos/id/115/1280/720", contentUrl: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8", type: .detail, contents: [], isFinal: false)
 
-let contentData14 = ContentViewModel(title: "Economía Global", cover: "https://picsum.photos/id/677/1280/720", contentUrl: "https://www.sample-videos.com/video321/mp4/720/big_buck_bunny_720p_10mb.mp4", type: .list, contents: [
-    ContentViewModel(title: "Macroeconomía", cover: "https://picsum.photos/id/501/1280/720", contentUrl: "https://www.sample-videos.com/video321/mp4/720/big_buck_bunny_720p_10mb.mp4", type: .detail, contents: [], isFinal: false),
-    ContentViewModel(title: "Microeconomía", cover: "https://picsum.photos/id/502/1280/720", contentUrl: "https://www.sample-videos.com/video321/mp4/720/big_buck_bunny_720p_10mb.mp4", type: .detail, contents: [], isFinal: false)
+let contentData14 = ContentViewModel(title: "Economía Global", cover: "https://picsum.photos/id/677/1280/720", contentUrl: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8", type: .list, contents: [
+    ContentViewModel(title: "Macroeconomía", cover: "https://picsum.photos/id/501/1280/720", contentUrl: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8", type: .detail, contents: [], isFinal: false),
+    ContentViewModel(title: "Microeconomía", cover: "https://picsum.photos/id/502/1280/720", contentUrl: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8", type: .detail, contents: [], isFinal: false)
 ], isFinal: false)
 
-let contentData15 = ContentViewModel(title: "Antropología Cultural", cover: "https://picsum.photos/id/532/1280/720", contentUrl: "https://www.sample-videos.com/video321/mp4/720/big_buck_bunny_720p_10mb.mp4", type: .player, contents: [], isFinal: false)
+let contentData15 = ContentViewModel(title: "Antropología Cultural", cover: "https://picsum.photos/id/532/1280/720", contentUrl: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8", type: .player, contents: [], isFinal: false)
 
-let contentData16 = ContentViewModel(title: "Historia del Arte", cover: "https://picsum.photos/id/129/1280/720", contentUrl: "https://www.sample-videos.com/video321/mp4/720/big_buck_bunny_720p_10mb.mp4", type: .detail, contents: [], isFinal: false)
+let contentData16 = ContentViewModel(title: "Historia del Arte", cover: "https://picsum.photos/id/129/1280/720", contentUrl: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8", type: .detail, contents: [], isFinal: false)
 
-let contentData17 = ContentViewModel(title: "Literatura Clásica", cover: "https://picsum.photos/id/458/1280/720", contentUrl: "https://www.sample-videos.com/video321/mp4/720/big_buck_bunny_720p_10mb.mp4", type: .list, contents: [
-    ContentViewModel(title: "Novelas", cover: "https://picsum.photos/id/601/1280/720", contentUrl: "https://www.sample-videos.com/video321/mp4/720/big_buck_bunny_720p_10mb.mp4", type: .detail, contents: [], isFinal: false),
-    ContentViewModel(title: "Poesías", cover: "https://picsum.photos/id/602/1280/720", contentUrl: "https://www.sample-videos.com/video321/mp4/720/big_buck_bunny_720p_10mb.mp4", type: .detail, contents: [], isFinal: false)
+let contentData17 = ContentViewModel(title: "Literatura Clásica", cover: "https://picsum.photos/id/458/1280/720", contentUrl: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8", type: .list, contents: [
+    ContentViewModel(title: "Novelas", cover: "https://picsum.photos/id/601/1280/720", contentUrl: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8", type: .detail, contents: [], isFinal: false),
+    ContentViewModel(title: "Poesías", cover: "https://picsum.photos/id/602/1280/720", contentUrl: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8", type: .detail, contents: [], isFinal: false)
 ], isFinal: false)
 
-let contentData18 = ContentViewModel(title: "Mitología y Leyendas", cover: "https://picsum.photos/id/711/1280/720", contentUrl: "https://www.sample-videos.com/video321/mp4/720/big_buck_bunny_720p_10mb.mp4", type: .player, contents: [], isFinal: false)
+let contentData18 = ContentViewModel(title: "Mitología y Leyendas", cover: "https://picsum.photos/id/711/1280/720", contentUrl: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8", type: .player, contents: [], isFinal: false)
 
-let contentData19 = ContentViewModel(title: "Ciencias Políticas", cover: "https://picsum.photos/id/345/1280/720", contentUrl: "https://www.sample-videos.com/video321/mp4/720/big_buck_bunny_720p_10mb.mp4", type: .detail, contents: [], isFinal: false)
+let contentData19 = ContentViewModel(title: "Ciencias Políticas", cover: "https://picsum.photos/id/345/1280/720", contentUrl: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8", type: .detail, contents: [], isFinal: false)
 
 let contentData20 = ContentViewModel(title: "Educación y Pedagogía", cover: "https://picsum.photos/id/589/1280/720", contentUrl: "https://www.sample-videos.com/video123/mp4/480/asdasdas.mp4", type: .list, contents: [
     ContentViewModel(title: "Métodos de Enseñanza", cover: "https://picsum.photos/id/701/1280/720", contentUrl: "https://www.sample-videos.com/video123/mp4/480/asdasdas.mp4", type: .detail, contents:[], isFinal: false)

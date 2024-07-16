@@ -34,7 +34,9 @@ struct ProfileView: View {
             
             Spacer()
         }
+#if !os(tvOS)
         .navigationBarTitle("Perfil del Usuario", displayMode: .inline)
+#endif
         .padding()
     }
 }

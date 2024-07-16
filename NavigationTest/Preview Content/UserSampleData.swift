@@ -7,5 +7,5 @@
 
 import Foundation
 
-let userRichieData = UserViewModel(firstName: "Richie", lastName: "Rodríguez", address: "Rúa Carlos M. de Céspedes, 4, 1ºA", age: 46, profilePictureURL: URL(string: "https://i.pravatar.cc/250?u=a042581f4e290267042"))
-let userRichieNoAvatarData = UserViewModel(firstName: "Richie", lastName: "Rodríguez", address: "Rúa Carlos M. de Céspedes, 4, 1ºA", age: 46, profilePictureURL: nil)
+let userRichieData = UserViewModel(firstName: "John", lastName: "Doe", address: "Street View, 1", age: 32, profilePictureURL: URL(string: "https://i.pravatar.cc/250?u=a042581f4e290267042"))
+let userRichieNoAvatarData = UserViewModel(firstName: "John", lastName: "Doe", address: "Street View, 1", age: 32, profilePictureURL: nil)

@@ -25,8 +25,7 @@ struct ContentImageView: View {
                     Image(systemName: "photo.artframe")
                         .resizable()
                         .scaledToFit()
-                        .foregroundColor(.gray)
-                        .frame(width: 100)
+                        .frame(width: 320)
                 @unknown default:
                     EmptyView()
                 }
@@ -35,8 +34,7 @@ struct ContentImageView: View {
             Image(systemName: "photo.artframe")
                 .resizable()
                 .scaledToFit()
-                .foregroundColor(.gray)
-                .frame(width: 100)
+                .frame(width: 320)
         }
     }
 }

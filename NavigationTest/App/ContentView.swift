@@ -21,27 +21,21 @@ struct ContentView: View {
                 NavigationStack(path: binding(for: menuItem.id)) {
                     MenuItemView(menuItem: menuItem)
                         .navigationDestination(for: ContentViewModel.self) { content in
-                            if (content.isFinal) {
-                                if (content.type == .list) {
-                                    ListView(content: content)
-                                }
+                            switch content.type {
+                            case .detail:
+                                ContentDetailView(content: content)
+                            case .player:
                                 PlayerView(content: content)
-                            } else {
-                                switch content.type {
-                                case .detail:
-                                    ContentDetailView(content: content)
-                                case .player:
-                                    PlayerView(content: content)
-                                case .list:
-                                    ListView(content: content)
-                                }
+                            case .list:
+                                ListView(content: content)
                             }
                         }
                         .navigationDestination(for: ContentViewModelDetailWrapper.self) { content in
                             if (content.content.type == .list) {
                                 ListView(content: content.content)
+                            } else {
+                                PlayerView(content: content.content)
                             }
-                            PlayerView(content: content.content)
                         }
                 }
                 .tabItem {

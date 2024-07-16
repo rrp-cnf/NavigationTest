@@ -25,14 +25,14 @@ struct WidgetView: View {
                                 Text(content.title)
                                     .font(.caption)
                                     .bold()
-                                    .frame(minWidth: 0, maxWidth: .infinity)
+                                    //.frame(minWidth: 0, maxWidth: .infinity)
                                     .lineLimit(1)
                             }
-                            .frame(width: 150, height: 130)
+                            .frame(width: 320, height: 240)
                         })
                     }
                 }
-                .padding(.horizontal)
+                .padding()
             }
         }
     }

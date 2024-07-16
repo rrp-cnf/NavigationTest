@@ -26,8 +26,7 @@ struct ContentDetailView: View {
                     }
                     .ignoresSafeArea()
             } placeholder: {
-                Color.gray
-                    .ignoresSafeArea()
+                ProgressView()
             }
             
             // Contenido sobre la imagen de fondo
@@ -35,11 +34,13 @@ struct ContentDetailView: View {
                 Text(content.title)
                     .font(.title)
                     .foregroundColor(titleColor)
-                NavigationLink(value: content, label: {
+                NavigationLink(value: ContentViewModelDetailWrapper(content: content), label: {
                     Text(content.type == .list ? "Ver Episodios" : "Ver Contenido")
                         .foregroundColor(.white)
                         .padding(8)
+#if !os(tvOS)
                         .background(BlurView(style: .systemUltraThinMaterial))
+#endif
                         .cornerRadius(10)
                 })
             }
