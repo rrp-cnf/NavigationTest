@@ -8,34 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+
     let menu: [MenuViewModel]
-    @StateObject private var navigationModel: NavigationModel
+
+    @StateObject private var router: NavigationModel
+
     init(menu: [MenuViewModel]) {
         self.menu = menu
-        _navigationModel = StateObject(wrappedValue: NavigationModel(menu: menu))
+        _router = StateObject(wrappedValue: NavigationModel(menu: menu))
     }
-    
+
     var body: some View {
-        TabView(selection: $navigationModel.selectedTabId) {
+        TabView(selection: $router.selectedTabId) {
             ForEach(menu) {menuItem in
-                NavigationStack(path: binding(for: menuItem.id)) {
+                NavigationStack(path: $router.path) {
                     MenuItemView(menuItem: menuItem)
                         .navigationDestination(for: ContentViewModel.self) { content in
-                            switch content.type {
-                            case .detail:
-                                ContentDetailView(content: content)
-                            case .player:
-                                PlayerView(content: content)
-                            case .list:
-                                ListView(content: content)
-                            }
-                        }
-                        .navigationDestination(for: ContentViewModelDetailWrapper.self) { content in
-                            if (content.content.type == .list) {
-                                ListView(content: content.content)
-                            } else {
-                                PlayerView(content: content.content)
-                            }
+                            router.view(for: content)
                         }
                 }
                 .tabItem {
@@ -47,14 +36,14 @@ struct ContentView: View {
                 .tag(menuItem.id)
             }
         }
+        .sheet(item: $router.presentingSheet) { content in
+            MoreInfoView(content: content)
+        }
+        .fullScreenCover(item: $router.presentingFullScreenCover) { content in
+            PlayerView(content: content)
+        }
         .padding()
-    }
-    
-    private func binding(for key: UUID) -> Binding<NavigationPath> {
-        Binding(
-            get: { navigationModel.paths[key, default: NavigationPath()] },
-            set: { navigationModel.paths[key] = $0 }
-        )
+        .environmentObject(router)
     }
 }
 

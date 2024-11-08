@@ -10,10 +10,13 @@ import UIKit
 import UIImageColors
 
 struct ContentDetailView: View {
-    
+
     let content: ContentViewModel
+
     @State private var titleColor: Color = .white
-    
+
+    @EnvironmentObject private var router: NavigationModel
+
     var body: some View {
         ZStack(alignment: .leading) {
             // Imagen de fondo
@@ -28,27 +31,42 @@ struct ContentDetailView: View {
             } placeholder: {
                 ProgressView()
             }
-            
+
             // Contenido sobre la imagen de fondo
             VStack(alignment: .leading) {
                 Text(content.title)
                     .font(.title)
                     .foregroundColor(titleColor)
-                NavigationLink(value: ContentViewModelDetailWrapper(content: content), label: {
-                    Text(content.type == .list ? "Ver Episodios" : "Ver Contenido")
-                        .foregroundColor(.white)
-                        .padding(8)
+                HStack(spacing: 32) {
+                    Button(action: {
+                        router.navigate(to: content, preferredNavigationType: .fullScreenCover)
+                    }, label: {
+                        Text(content.type == .list ? "Ver Episodios" : "Ver Contenido")
+                            .foregroundColor(.white)
+                            .padding(8)
 #if !os(tvOS)
-                        .background(BlurView(style: .systemUltraThinMaterial))
+                            .background(BlurView(style: .systemUltraThinMaterial))
 #endif
-                        .cornerRadius(10)
-                })
+                            .cornerRadius(10)
+                    })
+                    Button(action: {
+                        router.navigate(to: content, preferredNavigationType: .sheet)
+                    }, label: {
+                        Text("Más información")
+                            .foregroundColor(.white)
+                            .padding(8)
+#if !os(tvOS)
+                            .background(BlurView(style: .systemUltraThinMaterial))
+#endif
+                            .cornerRadius(10)
+                    })
+                }
             }
             .padding(.horizontal)
         }
         Spacer()
     }
-    
+
     private func extractColors(from image: Image) {
         guard let uiImage = image.asUIImage() else { return }
         

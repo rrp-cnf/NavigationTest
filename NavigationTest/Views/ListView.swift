@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct ListView: View {
+
     let content: ContentViewModel
-    
+
     var body: some View {
         if let contents = content.contents {
             ScrollView {

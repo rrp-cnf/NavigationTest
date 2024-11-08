@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MenuItemView: View {
     let menuItem: MenuViewModel
-    
+
     var body: some View {
         switch menuItem.type {
         case .screen:

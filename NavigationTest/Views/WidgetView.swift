@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct WidgetView: View {
+
     let widget: WidgetViewModel
-    
+
+    @EnvironmentObject private var router: NavigationModel
+
     var body: some View {
         VStack(alignment: .leading) {
             Text(widget.title)
@@ -18,18 +21,22 @@ struct WidgetView: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 15) {
                     ForEach(widget.contents) { content in
-                        NavigationLink(value: content, label: {
-                            VStack {
-                                ContentImageView(url: content.cover)
-                                    .cornerRadius(4)
-                                Text(content.title)
-                                    .font(.caption)
-                                    .bold()
+                        Button(
+                            action: {
+                                router.navigate(to: content, preferredNavigationType: .push)
+                            },
+                            label: {
+                                VStack {
+                                    ContentImageView(url: content.cover)
+                                        .cornerRadius(4)
+                                    Text(content.title)
+                                        .font(.caption)
+                                        .bold()
                                     //.frame(minWidth: 0, maxWidth: .infinity)
-                                    .lineLimit(1)
-                            }
-                            .frame(width: 320, height: 240)
-                        })
+                                        .lineLimit(1)
+                                }
+                                .frame(width: 320, height: 240)
+                            })
                     }
                 }
                 .padding()

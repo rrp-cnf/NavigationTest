@@ -8,13 +8,18 @@
 import SwiftUI
 
 struct HotView: View {
+    
     let contentList: [ContentViewModel] = contentListData
+    
+    @EnvironmentObject private var router: NavigationModel
     
     var body: some View {
         ScrollView {
             LazyVStack {
                 ForEach(contentList) { content in
-                    NavigationLink(value: content, label: {
+                    Button(action: {
+                        router.navigate(to: content, preferredNavigationType: .push)
+                    }, label: {
                         ContentListItemView(content: content)
                     })
                 }

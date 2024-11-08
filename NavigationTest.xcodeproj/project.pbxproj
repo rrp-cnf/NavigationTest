@@ -36,6 +36,7 @@
 		0B9F2B7C2C3A96AF00699790 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9F2B7B2C3A96AF00699790 /* UserViewModel.swift */; };
 		0B9F2B7E2C3A970700699790 /* UserSampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9F2B7D2C3A970700699790 /* UserSampleData.swift */; };
 		0B9F2B832C3A9C5300699790 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B9F2B822C3A9C5300699790 /* Images.xcassets */; };
+		0BF9107D2CDE439100F1EC7B /* MoreInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF9107C2CDE439100F1EC7B /* MoreInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		0B9F2B7B2C3A96AF00699790 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		0B9F2B7D2C3A970700699790 /* UserSampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSampleData.swift; sourceTree = "<group>"; };
 		0B9F2B822C3A9C5300699790 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0BF9107C2CDE439100F1EC7B /* MoreInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +187,7 @@
 				0B7CDE902C3BD6240007F4F1 /* ContentImageView.swift */,
 				0B7CDE922C3BE4A30007F4F1 /* WidgetView.swift */,
 				0B7CDE982C3BF5360007F4F1 /* PlayerView.swift */,
+				0BF9107C2CDE439100F1EC7B /* MoreInfoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				0B9F2B6A2C39582900699790 /* MenuSampleData.swift in Sources */,
 				0B9F2B7C2C3A96AF00699790 /* UserViewModel.swift in Sources */,
 				0B7CDE9F2C3D83550007F4F1 /* ContentViewModelDetailWrapper.swift in Sources */,
+				0BF9107D2CDE439100F1EC7B /* MoreInfoView.swift in Sources */,
 				0B9F2B762C3A942800699790 /* ProfileView.swift in Sources */,
 				0B7CDE832C3B145F0007F4F1 /* ScreenViewModel.swift in Sources */,
 				0B9F2B662C39560900699790 /* MenuViewModel.swift in Sources */,

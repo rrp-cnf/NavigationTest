@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct SearchResultView: View {
+
     @Binding var searchText: String
     @State private var searchResults: [ContentViewModel] = contentListData
-    
+
+    @EnvironmentObject private var router: NavigationModel
+
     var body: some View {
         VStack {
             if searchText.isEmpty {
@@ -21,7 +24,9 @@ struct SearchResultView: View {
                 ScrollView {
                     LazyVStack {
                         ForEach(searchResults) { content in
-                            NavigationLink(value: content, label:{
+                            Button(action: {
+                                router.navigate(to: content, preferredNavigationType: .push)
+                            }, label: {
                                 ContentListItemView(content: content)
                                     .navigationTitle("Búsqueda")
                             })

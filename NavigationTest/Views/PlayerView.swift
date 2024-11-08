@@ -9,8 +9,9 @@ import SwiftUI
 import AVKit
 
 struct PlayerView: View {
+
     let content: ContentViewModel
-    
+
     var body: some View {
         if let url = URL(string: content.contentUrl) {
             let player = AVPlayer(url: url)
