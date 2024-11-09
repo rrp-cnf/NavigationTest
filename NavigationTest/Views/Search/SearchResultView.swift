@@ -37,11 +37,17 @@ struct SearchResultView: View {
             }
         }
         .onChange(of: searchText) {
-            if searchText.count > 0 {
-                let lowercasedText = searchText.lowercased()
-                self.searchResults = contentListData.filter {
-                    $0.title.lowercased().contains(lowercasedText)
+            do {
+                if searchText.count > 0 && searchText.count < 11 {
+                    let lowercasedText = searchText.lowercased()
+                    self.searchResults = contentListData.filter {
+                        $0.title.lowercased().contains(lowercasedText)
+                    }
+                } else {
+                    throw NavigationError.invalidSearch
                 }
+            } catch {
+                router.navigate(to: ErrorWrapper(error: error, guidance: "Try a query with 10 chars at most."), preferredNavigationType: .sheet)
             }
         }
     }

@@ -13,6 +13,7 @@ class NavigationModel: ObservableObject {
     @Published var path: NavigationPath
 
     @Published var presentingSheet: ContentViewModel?
+    @Published var presentingError: ErrorWrapper?
     @Published var presentingFullScreenCover: ContentViewModel?
 
     private var cancellables = Set<AnyCancellable>()
@@ -63,6 +64,10 @@ class NavigationModel: ObservableObject {
         }
     }
 
+    func navigate(to destination: ErrorWrapper, preferredNavigationType: NavigationTypeEnum) {
+        presentSheet(destination)
+    }
+
     func navigateBack() {
         path.removeLast()
     }
@@ -72,13 +77,25 @@ class NavigationModel: ObservableObject {
     }
 
     @ViewBuilder
-    func view(for content: ContentViewModel) -> some View {
-        switch content.type {
-        case .list:
-            ListView(content: content)
-        default:
-            ContentDetailView(content: content)
+    func view(for content: ContentViewModel, type: NavigationTypeEnum) -> some View {
+        switch type {
+        case .push:
+            switch content.type {
+            case .list:
+                ListView(content: content)
+            default:
+                ContentDetailView(content: content)
+            }
+        case .sheet:
+            MoreInfoView(content: content)
+        case .fullScreenCover:
+            PlayerView(content: content)
         }
+    }
+
+    @ViewBuilder
+    func view(for error: ErrorWrapper, type: NavigationTypeEnum) -> some View {
+        ErrorView(errorWrapper: error)
     }
 
     private func push(_ content: ContentViewModel) {
@@ -88,6 +105,10 @@ class NavigationModel: ObservableObject {
 
     private func presentSheet(_ content: ContentViewModel) {
         self.presentingSheet = content
+    }
+
+    private func presentSheet(_ error: ErrorWrapper) {
+        self.presentingError = error
     }
 
     private func presentFullScreen(_ content: ContentViewModel) {

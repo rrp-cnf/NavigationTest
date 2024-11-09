@@ -24,7 +24,7 @@ struct ContentView: View {
                 NavigationStack(path: $router.path) {
                     MenuItemView(menuItem: menuItem)
                         .navigationDestination(for: ContentViewModel.self) { content in
-                            router.view(for: content)
+                            router.view(for: content, type: .push)
                         }
                 }
                 .tabItem {
@@ -37,10 +37,13 @@ struct ContentView: View {
             }
         }
         .sheet(item: $router.presentingSheet) { content in
-            MoreInfoView(content: content)
+            router.view(for: content, type: .sheet)
+        }
+        .sheet(item: $router.presentingError) { error in
+            router.view(for: error, type: .sheet)
         }
         .fullScreenCover(item: $router.presentingFullScreenCover) { content in
-            PlayerView(content: content)
+            router.view(for: content, type: .fullScreenCover)
         }
         .padding()
         .environmentObject(router)

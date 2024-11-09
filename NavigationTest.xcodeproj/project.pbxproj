@@ -37,6 +37,9 @@
 		0B9F2B7E2C3A970700699790 /* UserSampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9F2B7D2C3A970700699790 /* UserSampleData.swift */; };
 		0B9F2B832C3A9C5300699790 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B9F2B822C3A9C5300699790 /* Images.xcassets */; };
 		0BF9107D2CDE439100F1EC7B /* MoreInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF9107C2CDE439100F1EC7B /* MoreInfoView.swift */; };
+		0BF9107F2CDF985E00F1EC7B /* ErrorWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF9107E2CDF985E00F1EC7B /* ErrorWrapper.swift */; };
+		0BF910812CDF996800F1EC7B /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF910802CDF996800F1EC7B /* ErrorView.swift */; };
+		0BF910832CDF9D7300F1EC7B /* NavigationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF910822CDF9D7300F1EC7B /* NavigationError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +73,9 @@
 		0B9F2B7D2C3A970700699790 /* UserSampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSampleData.swift; sourceTree = "<group>"; };
 		0B9F2B822C3A9C5300699790 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0BF9107C2CDE439100F1EC7B /* MoreInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoView.swift; sourceTree = "<group>"; };
+		0BF9107E2CDF985E00F1EC7B /* ErrorWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorWrapper.swift; sourceTree = "<group>"; };
+		0BF910802CDF996800F1EC7B /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		0BF910822CDF9D7300F1EC7B /* NavigationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +156,8 @@
 				0B9F2B7B2C3A96AF00699790 /* UserViewModel.swift */,
 				0B7CDE822C3B145F0007F4F1 /* ScreenViewModel.swift */,
 				0B7CDE9B2C3C2DE00007F4F1 /* NavigationModel.swift */,
+				0BF9107E2CDF985E00F1EC7B /* ErrorWrapper.swift */,
+				0BF910822CDF9D7300F1EC7B /* NavigationError.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -188,6 +196,7 @@
 				0B7CDE922C3BE4A30007F4F1 /* WidgetView.swift */,
 				0B7CDE982C3BF5360007F4F1 /* PlayerView.swift */,
 				0BF9107C2CDE439100F1EC7B /* MoreInfoView.swift */,
+				0BF910802CDF996800F1EC7B /* ErrorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -272,6 +281,7 @@
 				0B9F2B7E2C3A970700699790 /* UserSampleData.swift in Sources */,
 				0B9F2B6A2C39582900699790 /* MenuSampleData.swift in Sources */,
 				0B9F2B7C2C3A96AF00699790 /* UserViewModel.swift in Sources */,
+				0BF9107F2CDF985E00F1EC7B /* ErrorWrapper.swift in Sources */,
 				0B7CDE9F2C3D83550007F4F1 /* ContentViewModelDetailWrapper.swift in Sources */,
 				0BF9107D2CDE439100F1EC7B /* MoreInfoView.swift in Sources */,
 				0B9F2B762C3A942800699790 /* ProfileView.swift in Sources */,
@@ -279,6 +289,7 @@
 				0B9F2B662C39560900699790 /* MenuViewModel.swift in Sources */,
 				0B9F2B5A2C3955E200699790 /* ContentView.swift in Sources */,
 				0B9F2B782C3A944300699790 /* ScreenView.swift in Sources */,
+				0BF910812CDF996800F1EC7B /* ErrorView.swift in Sources */,
 				0B9F2B6E2C395B2400699790 /* HomeView.swift in Sources */,
 				0B9F2B742C3A8EF900699790 /* MenuItemView.swift in Sources */,
 				0B9F2B722C395B6000699790 /* HotView.swift in Sources */,
@@ -287,6 +298,7 @@
 				0B7CDE972C3BE8CF0007F4F1 /* ScreenSampleData.swift in Sources */,
 				0B7CDE8D2C3BC95C0007F4F1 /* SearchResultView.swift in Sources */,
 				0B7CDE932C3BE4A30007F4F1 /* WidgetView.swift in Sources */,
+				0BF910832CDF9D7300F1EC7B /* NavigationError.swift in Sources */,
 				0B7CDE852C3B2E610007F4F1 /* ContentSampleData.swift in Sources */,
 				0B7CDE9C2C3C2DE00007F4F1 /* NavigationModel.swift in Sources */,
 				0B9F2B7A2C3A945E00699790 /* ListView.swift in Sources */,
